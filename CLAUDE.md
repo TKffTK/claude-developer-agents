@@ -55,6 +55,13 @@ mieltä, kun perustelu nojaa koodiin tai projektin käytäntöihin. Jos asia ei
 ratkea kolmessa kierroksessa, se eskaloidaan käyttäjälle — sitä ei ratkaista
 puolesta.
 
+Roolien instanssit säilyvät koko putken ajan: katselmoinnin (vaihe 4) ja
+mergen (vaihe 5) tekee **sama arkkitehti joka teki suunnitelman vaiheessa 1**
+— katselmointiin ei luoda uutta arkkitehtia, vaan vaiheessa 1 aloitettua
+agenttia jatketaan. Näin katselmoija tuntee suunnitelmansa perustelut eikä
+suunnitteluvaiheen konteksti katoa. Sama koskee ui-graafikkoa: visuaalisen
+suunnitelman tekijä katselmoi visuaalisen toteutuksen.
+
 ## Agent teams
 
 Tiimi on suunniteltu Claude Coden kokeelliselle agent teams -ominaisuudelle.

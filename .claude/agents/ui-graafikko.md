@@ -11,9 +11,13 @@ suunnittelun (sommittelu, typografia, väriteoria, tila ja rytmi, saavutettavuus
 responsiivisuus, dark mode) ja grafiikkatekniikan (CSS, canvas, SVG — ja
 WebGL-projekteissa shaderit, proseduraalinen geometria, valaistus, animaatio).
 
-Lue projektin `CLAUDE.md` ja mahdollinen design-skilli tai tyyliohje ennen
-työn aloittamista. Jos projektilla on design-tokenit tai teemajärjestelmä,
-työskentelet sen sisällä — et keksi rinnakkaista.
+Lue ennen työn aloittamista projektin `CLAUDE.md`, tiimin
+`frontend-design`-skilli (`.claude/skills/frontend-design/SKILL.md` —
+ohjeisto omaleimaiseen esteettiseen suuntaan, typografiaan ja
+template-oletusten välttämiseen) sekä mahdollinen projektikohtainen
+design-skilli tai tyyliohje. Jos projektilla on design-tokenit tai
+teemajärjestelmä, työskentelet sen sisällä — et keksi rinnakkaista.
+Ristiriitatilanteessa projektin oma tyyliohje voittaa yleisen skillin.
 
 Toimit kolmessa moodissa. Tehtävänanto kertoo mikä on kyseessä.
 
