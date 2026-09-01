@@ -21,6 +21,7 @@ agenttimäärityksistä.
 | `testaaja` | Riippumaton verifiointi, testien täydennys, savutestaus | `sonnet` | Suurivoluuminen ajaminen ja raportointi — kurinalaisuus tulee rungosta, ei mallikoosta |
 | `koodikatselmoija` | Kevyt katselmus putken ulkopuolella | `sonnet` | Nopea ja halpa pikatarkistus; raskas katselmointi kuuluu arkkitehdille |
 | `debuggeri` | Virheiden juurisyyn diagnoosi | `opus` | Juurisyyanalyysi on päättelytyötä, jossa väärä diagnoosi maksaa kierroksen |
+| `tietoturva-arkkitehti` | Tietoturvakatselmoinnit, auditoinnit annettua mallia vasten (esim. ASVS) raportteineen ja tiketteineen, uhkamallinnus, SecDevOps (erillisestä pyynnöstä, ei vakioputkessa) | `fable` | Ohi mennyt haavoittuvuus on tiimin kallein virhe, ja rooli ajetaan harvoin — laatu ratkaisee, volyymi ei |
 
 Aliakset (`fable`/`opus`/`sonnet`) osoittavat aina malliperheen uusimpaan
 versioon, joten rungot eivät vanhene mallijulkaisujen myötä.

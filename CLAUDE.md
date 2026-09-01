@@ -12,7 +12,7 @@ ja agentit lukevat ne sieltä.
 ## Tiimi
 
 Ominaisuudet tehdään **putkena, mutta keskustellen**. Neljä putkiroolia ja
-kaksi tukiagenttia:
+kolme tukiagenttia:
 
 | Rooli | Agentti | Malli | Vastuu | Ei tee |
 |-------|---------|-------|--------|--------|
@@ -22,6 +22,7 @@ kaksi tukiagenttia:
 | Testaaja | `testaaja` | Sonnet | Riippumaton verifiointi, puuttuvat testit, savutestaus | Ei muokkaa tuotantokoodia |
 | Koodikatselmoija (tuki) | `koodikatselmoija` | Sonnet | Kevyt katselmus ilman koko putkea | Ei muokkaa mitään |
 | Debuggaaja (tuki) | `debuggeri` | Opus | Juurisyyn diagnoosi ja korjausehdotus | Ei toteuta eikä committoi |
+| Tietoturva-arkkitehti (tuki) | `tietoturva-arkkitehti` | Fable | Tietoturvakatselmoinnit koodille ja PR:ille, koko koodikannan auditointi annettua mallia vasten (esim. ASVS) raportteineen ja tiketteineen, uhkamallinnus, SecDevOps-arviot — erillisestä pyynnöstä | Ei muokkaa lähdekoodia, ei osa vakioputkea |
 
 Mallijako roolin vaativuuden ja hinta/teho-suhteen mukaan: sitovat
 suunnittelupäätökset, katselmointi ja mergepäätös Fablella (virheet ovat
