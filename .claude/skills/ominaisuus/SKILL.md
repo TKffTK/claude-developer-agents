@@ -45,6 +45,10 @@ Putken vaiheet ovat molemmissa tiloissa samat.
 - `arkkitehti`: tekninen suunnitelma (anna ominaisuuden kuvaus ja branch).
 - `ui-graafikko`: visuaalinen suunnitelma — vain jos ominaisuudessa on
   visuaalinen osuus; puhtaasti tekninen muutos ei tarvitse sitä.
+- Tässä luodut arkkitehti- ja ui-graafikko-instanssit elävät putken loppuun
+  asti: samat instanssit tekevät vaiheen 4 katselmoinnin ja arkkitehti
+  vaiheen 5 mergen. Subagent-tilassa älä siis päästä niitä katoamaan —
+  jatka niitä `SendMessage`lla myöhemmissä vaiheissa.
 - Jos suunnitelmat ovat ristiriidassa, ristiriita ratkaistaan arkkitehdin ja
   ui-graafikon keskusteluna ennen toteutusta.
 - Jos suunnitelmassa on avoimia kysymyksiä käyttäjälle, kysy ne
@@ -64,9 +68,16 @@ Putken vaiheet ovat molemmissa tiloissa samat.
   uudelleen. Katselmointiin mennään vasta verdiktillä `VIHREÄ`.
 
 ### 4. Katselmointi (rinnakkain)
-- `arkkitehti`: koodikatselmointi (anna suunnitelma ja testaajan raportti).
+- `arkkitehti`: koodikatselmointi. **Katselmoinnin tekee sama
+  arkkitehti-instanssi joka teki suunnitelman vaiheessa 1** — älä luo uutta
+  arkkitehtia katselmointiin. Tiimitilassa tämä on sama tiimiläinen;
+  subagent-tilassa jatka vaiheen 1 agenttia `SendMessage`lla. Suunnitelma on
+  sillä jo kontekstissa, joten anna vain testaajan raportti ja pyyntö
+  katselmoida toteutus suunnitelmaa vasten. Vain jos alkuperäinen instanssi
+  on menetetty (esim. sessio katkesi), luo uusi ja anna sille suunnitelma
+  kokonaisuudessaan — ja mainitse loppuraportissa että katselmoija vaihtui.
 - `ui-graafikko`: visuaalinen katselmointi, jos muutoksessa oli visuaalinen
-  osuus.
+  osuus — samoin sama instanssi joka teki visuaalisen suunnitelman.
 - Katselmointi on keskustelu: kehittäjä korjaa tai perustelee miksi ei
   korjaa, katselmoija hyväksyy perustelun tai tarkentaa. Älä ratkaise
   erimielisyyttä itse äläkä pehmennä kumpaakaan kantaa.

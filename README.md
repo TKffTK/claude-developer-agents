@@ -26,9 +26,22 @@ agenttimäärityksistä.
 Aliakset (`fable`/`opus`/`sonnet`) osoittavat aina malliperheen uusimpaan
 versioon, joten rungot eivät vanhene mallijulkaisujen myötä.
 
+## Mukana tulevat skillit
+
+- `.claude/skills/ominaisuus/` — tiimiputken ajava skilli (tämän repon omaa
+  sisältöä).
+- `.claude/skills/frontend-design/` — Anthropicin
+  [anthropics/skills](https://github.com/anthropics/skills)-kokoelmasta
+  kopioitu skilli (Apache 2.0, lisenssi hakemistossa mukana). Antaa
+  `ui-graafikko`-agentille esteettisen suunnan: omaleimainen visuaalinen
+  identiteetti, harkittu typografia ja template-oletusten välttäminen.
+  Agenttirunko ohjeistaa lukemaan sen ennen suunnittelua; projektin oma
+  tyyliohje voittaa ristiriitatilanteessa. Päivitys tehdään kopioimalla
+  upstream-versio uudelleen.
+
 ## Käyttöönotto projektissa
 
-1. Kopioi `.claude/agents/`, `.claude/skills/ominaisuus/` ja halutessasi
+1. Kopioi `.claude/agents/`, `.claude/skills/` ja halutessasi
    `.claude/settings.json` projektiisi. Kopioi `CLAUDE.md`:n tiimiosuus
    projektin omaan `CLAUDE.md`:hen (poista lainauslaatikko joka koskee vain
    tätä repoa).
